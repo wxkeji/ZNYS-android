@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ZNYS</string>
+    <string name="action_settings">Settings</string>
+    <string name="content_descriptor">nothing</string>
+    <string name="device_not_found">没有找到你的牙刷哦</string>
+    <string name="settings_add_user">添加账号</string>
+    <string name="settings_change_user">账号切换</string>
+    <string name="settings_add_brush">添加牙刷</string>
+    <string name="settings_change_brush">牙刷切换</string>
+    <string name="settings_contact">意见反馈</string>
+    <string name="settings_about">关于我们</string>
+    <string name="settings_debug">蓝牙调试</string>
+</resources>
