@@ -1,0 +1,100 @@
+<com.znys.view.MainView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:id="@+id/main_group_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/main_image_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/main_text_star_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="32"
+                android:textColor="@color/star_number"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/main_button_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_group_star"
+            android:background="@color/transparent"
+            android:src="@drawable/settings" />
+
+        <ImageButton
+            android:id="@+id/main_button_knowledge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/main_button_calendar"
+            android:background="@color/transparent"
+            android:src="@drawable/knowledge" />
+
+        <ImageButton
+            android:id="@+id/main_button_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent"
+            android:src="@drawable/calendar" />
+    </RelativeLayout>
+
+    <com.znys.view.widget.CabinetViewPager
+        android:id="@+id/main_cabinet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:background="@drawable/cabinet" />
+
+    <ImageButton
+        android:id="@+id/main_button_synchronization"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="15"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/button_synchronization" />
+
+    <com.znys.view.widget.GroupScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@drawable/advertisment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </com.znys.view.widget.GroupScrollView>
+
+
+</com.znys.view.MainView>
