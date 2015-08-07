@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_topbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/topbar_button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:background="@color/transparent"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:id="@+id/topbar_button_knowledge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/knowledge"
+        android:background="@color/transparent"
+        android:layout_toLeftOf="@+id/topbar_button_calendar" />
+
+    <ImageButton
+        android:id="@+id/topbar_button_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/calendar"
+        android:background="@color/transparent"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.znys.view.CalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/topbar_button_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/home"
+            android:background="@color/transparent"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/content_descriptor" />
+
+        <ImageButton
+            android:id="@+id/topbar_button_cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/cloud"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/content_descriptor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/calendar_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="目标 : " />
+
+        <TextView
+            android:id="@+id/calendar_text_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/calendar_text_title"
+            android:text="每天刷牙获得3颗星星，坚持21天" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <com.znys.view.widget.CalendarControlPager
+            android:id="@+id/calendar_calendar_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/calendar_button_arrow_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/arrow_left"
+                android:background="@color/transparent" />
+
+            <TextView
+                style="@style/CalendarControl.Title"
+                android:id="@+id/calendar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/calendar_button_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/arrow_right"
+                android:background="@color/transparent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.znys.view.CalendarView>
